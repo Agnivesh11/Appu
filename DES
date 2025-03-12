@@ -1,0 +1,44 @@
+import java.security.invalid key Exception
+import java.security.Nosuch Algorithm Exception
+import javax.crypto.Bad padding Exception;
+import javax.crypto.cipher;
+import javax.crypto.lllegalBlocksize Exception;
+import javax.crypto.keyGenerator;
+import javax.crypto.NOsuch padding Exception;
+import javax.crypto.secretkey;
+public class DES
+{
+public static void main(string[]argv){
+try{
+system.out.println("Message Encryption using DES Algorithm\n----");
+key Generator keygenerator=key Generator.getInstance("DES");
+secret key my Deskey=key generator.generate key();
+cipher descipher;
+descipher=cipher.get Instance("DES/ECB/PKCS5 padding");
+descipher.init(cipher.ENCRYPT_MODE,my Deskey);
+byte[]text="secret Information"getBytes();
+system.out.println("Message [Byte Format]:"+text);
+system.out.println("Message:"+new string(text));
+byte[]text Encrypted=descipher.do Final(text);
+system.out.println("Encrypted Message:"+textEncrypted);
+descipher.init(cipher.DECRYPT_MODE,myDeskey);
+byte[]text Decrypted=descipher.do Final(text Encrypted);
+system.out.println("decrypted Message:"+new string(text(Descrypted));
+  }catch (NO.such Algorithm Exception e){
+         e.print stack Trace();
+  }cath (NO.ssuch padding Exception e){
+         e.print stack TracK();
+  }cath (Invalid key Exception e){
+         e.print stack Trace();
+  }cath (IlllegalBlocksize Exception e){
+         e.print stack Trace();
+  }cath (Bad padding Exception e){
+         e.print stack Trace();
+   }
+}
+}         
+
+
+             
+                
+
